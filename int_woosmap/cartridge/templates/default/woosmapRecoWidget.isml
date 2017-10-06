@@ -9,7 +9,7 @@
     woosmapRecoWidgetOptions.googleClientId = dw.system.Site.getCurrent().getCustomPreferenceValue('GOOGLE_Client_Id');
 </isscript>
 <link type="text/css" rel="stylesheet" href="https://recommendation-js.woosmap.com/widget/recowidget.css">
-<div id="reco-widget" style="width:100px; height:100px"></div>
+<div id="reco-widget"></div>
 <script src="https://recommendation-js.woosmap.com/recommendation.js"></script>
 <script src="https://recommendation-js.woosmap.com/widget/recowidget.js"></script>
 <script type="text/javascript">
