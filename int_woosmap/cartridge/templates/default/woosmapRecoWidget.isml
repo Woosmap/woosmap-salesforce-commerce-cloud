@@ -14,9 +14,9 @@
 <script src="https://recommendation-js.woosmap.com/widget/recowidget.js"></script>
 <script type="text/javascript">
     var widgetOptions = {
-        woosmapKey: "<isprint value="${woosmapRecoWidgetOptions.woosmapKey}" encoding="off"/>",
+        woosmapKey: "${woosmapRecoWidgetOptions.woosmapKey}",
         google: {
-            clientId: "<isprint value="${woosmapRecoWidgetOptions.googleClientId}" encoding="off"/>"
+            clientId: "${woosmapRecoWidgetOptions.googleClientId}"
         }
     };
     var instantiateReco = function () {

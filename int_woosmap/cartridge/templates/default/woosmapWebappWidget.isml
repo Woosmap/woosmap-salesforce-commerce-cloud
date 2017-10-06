@@ -4,18 +4,22 @@
    Woosmap Webapp Template to include in a storelocator page
 </iscomment>
 <isscript>
-	 var woosmapWebappWidgetOptions = {};
-	 woosmapWebappWidgetOptions.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
-     woosmapWebappWidgetOptions.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
-     woosmapWebappWidgetOptions.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
+	var woosmapWebappWidgetOptions = {};
+	woosmapWebappWidgetOptions.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
+    woosmapWebappWidgetOptions.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
+    woosmapWebappWidgetOptions.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
+	woosmapWebappWidgetOptions.selectedStoreId = pdict.CurrentHttpParameterMap.storeId.stringValue || "";
 </isscript>
 <div id="store-locator" style="${woosmapWebappWidgetOptions.containerStyle}"></div>
 <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
 <script type="text/javascript">
     var loadWebApp = function () {
-        var webapp = new WebApp('store-locator', "<isprint value="${woosmapWebappWidgetOptions.publicKey}" encoding="off"/>");
-        var isMobile = document.querySelector('body').clientWidth < <isprint value="${woosmapWebappWidgetOptions.mobileBreakpoint}" encoding="off"/>;
+        var webapp = new WebApp('store-locator', "${woosmapWebappWidgetOptions.publicKey}");
+        var isMobile = document.querySelector('body').clientWidth < ${woosmapWebappWidgetOptions.mobileBreakpoint};
         webapp.render(isMobile);
+        if ("${woosmapWebappWidgetOptions.selectedStoreId}"){
+        	webapp.setInitialStateToSelectedStore("${woosmapWebappWidgetOptions.selectedStoreId}");
+        }
     };
 </script>
 <script src="https://www.google.com/jsapi?callback=loadWebApp"></script>
