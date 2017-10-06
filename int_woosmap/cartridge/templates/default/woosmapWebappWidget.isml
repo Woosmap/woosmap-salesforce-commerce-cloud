@@ -4,17 +4,17 @@
    Woosmap Webapp Template to include in a storelocator page
 </iscomment>
 <isscript>
-	 var woosmap_data = {};
-	 woosmap_data.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
-     woosmap_data.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
-     woosmap_data.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
+	 var woosmapWebappWidgetOptions = {};
+	 woosmapWebappWidgetOptions.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
+     woosmapWebappWidgetOptions.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
+     woosmapWebappWidgetOptions.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
 </isscript>
-<div id="store-locator" style="${woosmap_data.containerStyle}"></div>
+<div id="store-locator" style="${woosmapWebappWidgetOptions.containerStyle}"></div>
 <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
 <script type="text/javascript">
     var loadWebApp = function () {
-        var webapp = new WebApp('store-locator', "<isprint value="${woosmap_data.publicKey}" encoding="off"/>");
-        var isMobile = document.querySelector('body').clientWidth < <isprint value="${woosmap_data.mobileBreakpoint}" encoding="off"/>;
+        var webapp = new WebApp('store-locator', "<isprint value="${woosmapWebappWidgetOptions.publicKey}" encoding="off"/>");
+        var isMobile = document.querySelector('body').clientWidth < <isprint value="${woosmapWebappWidgetOptions.mobileBreakpoint}" encoding="off"/>;
         webapp.render(isMobile);
     };
 </script>
