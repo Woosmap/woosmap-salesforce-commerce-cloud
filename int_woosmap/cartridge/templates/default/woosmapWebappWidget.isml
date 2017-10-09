@@ -4,22 +4,33 @@
    Woosmap Webapp Template to include in a storelocator page
 </iscomment>
 <isscript>
-	var woosmapWebappWidgetOptions = {};
-	woosmapWebappWidgetOptions.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
-    woosmapWebappWidgetOptions.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
-    woosmapWebappWidgetOptions.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
-	woosmapWebappWidgetOptions.selectedStoreId = pdict.CurrentHttpParameterMap.storeId.stringValue || "";
+	var webappConfig = {};
+	webappConfig.publicKey = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Public_Key');
+    webappConfig.mobileBreakpoint = dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Mobile_Breakpoint');
+    webappConfig.containerStyle= dw.system.Site.getCurrent().getCustomPreferenceValue('WOOSMAP_Webapp_Container_style');
+    webappConfig.selectedStoreId = "";
+	if (!empty(pdict.CurrentHttpParameterMap.storeId.stringValue)) {
+		webappConfig.selectedStoreId = pdict.CurrentHttpParameterMap.storeId.stringValue;
+	}
 </isscript>
-<div id="store-locator" style="${woosmapWebappWidgetOptions.containerStyle}"></div>
+<div id="store-locator" style="${webappConfig.containerStyle}"></div>
 <script type="text/javascript" src="https://webapp.woosmap.com/webapp.js"></script>
 <script type="text/javascript">
+	var webappConfig = <isprint value="${JSON.stringify(webappConfig)}" encoding="off"/>;
     var loadWebApp = function () {
-        var webapp = new WebApp('store-locator', "${woosmapWebappWidgetOptions.publicKey}");
-        var isMobile = document.querySelector('body').clientWidth < ${woosmapWebappWidgetOptions.mobileBreakpoint};
-        webapp.render(isMobile);
-        if ("${woosmapWebappWidgetOptions.selectedStoreId}"){
-        	webapp.setInitialStateToSelectedStore("${woosmapWebappWidgetOptions.selectedStoreId}");
-        }
+	    	var webapp = new WebApp('store-locator', webappConfig.publicKey);
+	        var isMobile = document.querySelector('body').clientWidth < webappConfig.mobileBreakpoint;
+	        if (webappConfig.selectedStoreId){
+	        	webapp.setInitialStateToSelectedStore(webappConfig.selectedStoreId);
+	        }
+	        webapp.render(isMobile);
+    };
+    var initWoosmap = function(){
+	    if (document.readyState !== 'loading') {
+	    	loadWebApp();
+	    } else {
+	        document.addEventListener('DOMContentLoaded', loadWebApp);
+	    }
     };
 </script>
-<script src="https://www.google.com/jsapi?callback=loadWebApp"></script>
+<script src="https://www.google.com/jsapi?callback=initWoosmap"></script>

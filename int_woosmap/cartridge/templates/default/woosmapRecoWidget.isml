@@ -14,15 +14,17 @@
 <script src="https://recommendation-js.woosmap.com/widget/recowidget.js"></script>
 <script type="text/javascript">
     var widgetOptions = {
-        woosmapKey: "${woosmapRecoWidgetOptions.woosmapKey}",
+        woosmapKey: "<isprint value="${woosmapRecoWidgetOptions.woosmapKey}" encoding="off"/>",
         google: {
-            clientId: "${woosmapRecoWidgetOptions.googleClientId}"
+            clientId: "<isprint value="${woosmapRecoWidgetOptions.googleClientId}" encoding="off"/>"
         }
     };
     var instantiateReco = function () {
         new wgs.genericreco.RecommendationPlugin('#reco-widget', widgetOptions);
     };
-    document.addEventListener('DOMContentLoaded', function () {
-        instantiateReco();
-    });
+    if (document.readyState !== 'loading') {
+    	instantiateReco();
+    } else {
+        document.addEventListener('DOMContentLoaded', instantiateReco);
+    }
 </script>
