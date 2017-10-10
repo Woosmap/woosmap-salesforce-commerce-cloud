@@ -15,7 +15,6 @@
 <script src="https://recommendation-js.woosmap.com/widget/recowidget.js"></script>
 <script type="text/javascript">
 	var widgetOptions = <isprint value="${JSON.stringify(woosmapRecoWidgetOptions)}" encoding="off"/>;
-	console.log(widgetOptions);
     var instantiateReco = function () {
         new wgs.genericreco.RecommendationPlugin('#reco-widget', widgetOptions);
     };
