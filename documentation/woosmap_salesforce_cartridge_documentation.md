@@ -37,7 +37,7 @@ To install the cartridge **int_woosmap** into the Demandware UX Studio IDE, the 
 - Select the Settings tab.
 - In the cartridges field add int_woosmap: at the beginning of the existing list: int_woosmap:woosmap_storefront_controllers:woosmap_storefront_core
 
-![woosmap cartridge config](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master//documentation/woosmap_cartridge_config.jpg)
+![woosmap cartridge config](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master/documentation/woosmap_cartridge_config.jpg)
 
 ### Import Woosmap Preferences
 
@@ -46,7 +46,7 @@ Import Metadata
 - Log into the Business Manager;
 - Go to Administration -> Site Development -> Import & Export;
 
-![woosmap preferences import](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master//documentation/woosmap_preferences_import.jpg)
+![woosmap preferences import](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master/documentation/woosmap_preferences_import.jpg)
 
 
 - Under Import & Export Files, click Upload;
@@ -70,7 +70,7 @@ Import Metadata
 - Go to **WOOSMAP_Preferences**;
 - Add all needed information.
 
-![woosmap preferences setup](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master//documentation/woosmap_cartridge_setup.jpg)
+![woosmap preferences setup](https://raw.githubusercontent.com/woosmap/woosmap-salesforce-commerce-cloud/master/documentation/woosmap_preferences_setup.jpg)
 
 
 ## Include Woosmap Templates
