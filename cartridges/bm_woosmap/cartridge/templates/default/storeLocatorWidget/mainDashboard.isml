@@ -1,0 +1,8 @@
+<isdecorate template="application/MenuFrame">
+    <isinclude template="storeLocatorWidget/header"/>
+    <div id="dashboard-container">
+        <h1 class="table_title main-dashboard__title">
+            ${Resource.msg('dashboard_title', 'storelocatorwidget', null)}</h1>
+        <isinclude template="storeLocatorWidget/mainMenu"/>
+    </div>
+</isdecorate>

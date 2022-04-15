@@ -1,0 +1,15 @@
+<isdecorate template="common/layout/page">
+    <script type="text/template" id="slw-conf">
+        <isprint value="${pdict.storeLocatorWidgetConf}" encoding="htmlsinglequote"/>
+    </script>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('https://webapp.woosmap.com/webapp.js');
+        assets.addJs('/js/storeLocatorWidget.js');
+        assets.addCss('/css/storeLocatorWidget.css');
+    </isscript>
+    <div class="store-locator-widget-wrapper">
+        <div id="store-locator-widget">
+        </div>
+    </div>
+</isdecorate>

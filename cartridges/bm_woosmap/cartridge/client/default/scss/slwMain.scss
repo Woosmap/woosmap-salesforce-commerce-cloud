@@ -1,0 +1,130 @@
+$lightGray : #e0e0e0;
+$mediumGray: #8b8b8b;
+$lightBlue: #17a8f1;
+$red: #f00;
+$green: #84bd00;
+
+// General styles
+#bm_content_column {
+    padding: 0;
+}
+// Main Dashboard
+#dashboard-container {
+    margin: 0 8rem 3rem;
+}
+
+.table_title.main-dashboard__title {
+    color: $lightBlue;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+// DASHBOARD BUTTONS
+.flex.module__buttons-container {
+    height: 6rem;
+    border-top: 0.1rem solid $lightGray;
+    border-bottom: 0.1rem solid $lightGray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    a {
+        background: none;
+        border: 0;
+        color: $mediumGray;
+        font-size: 1.8rem;
+        padding: 1.6rem 0;
+        margin: 0 1.6rem;
+    }
+
+    a:first-child {
+        margin-left: 0;
+    }
+
+    a:hover {
+        color: $lightBlue;
+        text-decoration: none;
+    }
+
+    .navCurrentTab {
+        font-weight: 600;
+        color: $lightBlue;
+        border-bottom: 0.3rem solid $lightBlue;
+        border-radius: 0;
+    }
+}
+
+.content-section {
+    all: unset;
+    font-size: 1.4rem;
+
+    form {
+        width: 35rem;
+
+        .form-row {
+            display: flex;
+            flex-flow: column;
+            padding: 5% 0;
+
+            &.red input {
+                border-color: $red;
+            }
+
+            > * {
+                flex: 1;
+            }
+
+            label {
+                font-size: 1.6rem;
+                color: $mediumGray;
+            }
+
+            input,
+            select,
+            textarea {
+                padding: 3%;
+                border: 0.1rem solid $lightBlue;
+            }
+
+            textarea {
+                width: auto;
+                min-height: 20rem;
+            }
+        }
+
+        input[type="submit"] {
+            background: transparent;
+            border: 0.1rem solid $lightBlue;
+            color: $lightBlue;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0;
+            padding: 0.7rem 2rem;
+            text-decoration: none;
+            border-radius: 0;
+            transition: 0.1s all ease-out;
+
+            &:hover {
+                background-color: $lightBlue;
+                color: #fff;
+                border: 0.1rem solid $lightBlue;
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        tr {
+            border-bottom: 0.1rem solid $lightGray;
+            vertical-align: text-top;
+
+            td {
+                padding: 2rem 1rem;
+                width: 100%;
+            }
+        }
+    }
+}

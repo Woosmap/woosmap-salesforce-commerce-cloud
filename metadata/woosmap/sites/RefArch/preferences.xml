@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances>
+            <preference preference-id="storeLocatorWidgetConf">{
+  "woosmapview": {
+    "fitBounds": true
+  },
+  "theme": {
+    "primaryColor": "#000"
+  },
+  "maps": {
+    "provider": "woosmap"
+  },
+  "datasource": {
+    "maxResponses": 10,
+    "maxDistance": 100000,
+    "useDistanceMatrix": false,
+    "routeProvider": "woosmap"
+  }
+}</preference>
+        </all-instances>
+        <development/>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>

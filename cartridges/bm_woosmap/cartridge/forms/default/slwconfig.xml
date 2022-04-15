@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field formid="woosmapPublicApiKey" label="forms.config.woosmapPublicApiKey.label" description="forms.config.woosmapPublicApiKey.description"  type="string" mandatory="true" />
+    <field formid="storeLocatorWidgetConf" label="forms.config.storeLocatorWidgetConf.label" description="forms.config.storeLocatorWidgetConf.description"  type="string" mandatory="true" />
+    <action formid="save" label="forms.config.save.label" valid-form="true"/>
+
+</form>

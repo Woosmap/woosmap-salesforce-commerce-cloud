@@ -1,0 +1,40 @@
+<isdecorate template="application/MenuFrame">
+    <isinclude template="storeLocatorWidget/header"/>
+    <div id="dashboard-container">
+        <h1 class="table_title main-dashboard__title">
+            ${Resource.msg('dashboard_title', 'storelocatorwidget', null)}</h1>
+        <isinclude template="storeLocatorWidget/mainMenu"/>
+        <div class="content-section">
+            <div id="config-section">
+                <form method="post" action="${URLUtils.https('StoreLocatorWidgetModule-Config')}"
+                      name="${session.forms.slwconfig.htmlName}">
+
+                    <div class="form-row ${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'red' : ''}">
+                        <label for="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}">
+                            <span>${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.label, 'storelocatorwidget', null)}</span>
+                        </label>
+                        <input required id="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}" type="text"
+                               name="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}"
+                               value="${session.forms.slwconfig.woosmapPublicApiKey.htmlValue}">
+                        <p>
+                            ${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.description, 'storelocatorwidget', null)}</p>
+                    </div>
+
+                    <div class="form-row ${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'red' : ''}">
+                        <label for="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
+                            <span>${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.label, 'storelocatorwidget', null)}</span>
+                        </label>
+                        <textarea required id="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}"
+                                  name="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
+                                   ${session.forms.slwconfig.storeLocatorWidgetConf.htmlValue}
+                            </textarea>
+                    </div>
+
+                    <input type="submit"
+                           value="${Resource.msg(session.forms.slwconfig.save.label, 'storelocatorwidget', null)}"
+                           name="${session.forms.slwconfig.save.htmlName}"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</isdecorate>
