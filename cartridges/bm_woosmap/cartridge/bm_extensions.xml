@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <extensions xmlns="http://www.demandware.com/xml/bmmodules/2007-12-11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.demandware.com/xml/bmmodules/2007-12-11 bmext.xsd">
 
-    <menuitem id="custom_module_storelocatorwidget" position="2600" site="true">
-        <name xml:lang="x-default">Store Locator Widget</name>
-        <short_description xml:lang="x-default">Store Locator Widget</short_description>
-        <description xml:lang="x-default">Store Locator Widget</description>
+    <menuitem id="custom_module_woosmap" position="2600" site="true">
+        <name xml:lang="x-default">Woosmap</name>
+        <short_description xml:lang="x-default">Modules to manage Woosmap</short_description>
+        <description xml:lang="x-default">Helps manage the Woosmap Integration</description>
         <icon>images/woosmap_logo.png</icon>
     </menuitem>
 
-    <menuaction id="custom_module_storelocatorwidget_submenu" menupath="custom_module_storelocatorwidget" position="1" site="true">
+    <menuaction id="custom_module_woosmap_submenu" menupath="custom_module_woosmap" position="1" site="true">
         <name xml:lang="x-default">Store Locator Widget Config</name>
         <short_description xml:lang="x-default">Configure Store Locator Widget</short_description>
-        <description xml:lang="x-default">Configure Store Locator Widget</description>
+        <description xml:lang="x-default">Set your preferences for Woosmap Store Locator Widget</description>
         <exec pipeline="StoreLocatorWidgetModule" node="Dashboard" />
         <sub-pipelines>
             <pipeline name="StoreLocatorWidgetModule" />
