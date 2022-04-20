@@ -20,12 +20,19 @@ var bootstrapPackages = {
     Util: 'exports-loader?Util!bootstrap/js/src/util'
 };
 
+var cartridgeName = 'int_woosmap';
+process.argv.forEach((val, index) => {
+    if (val === '--cartridgeName') {
+        cartridgeName = process.argv[index + 1];
+    }
+});
+
 module.exports = [{
     mode: 'none',
     name: 'js',
     entry: jsFiles,
     output: {
-        path: path.resolve('./cartridges/int_woosmap/cartridge/static'),
+        path: path.resolve(`./cartridges/${cartridgeName}/cartridge/static`),
         filename: '[name].js'
     },
     module: {
@@ -49,7 +56,7 @@ module.exports = [{
     name: 'scss',
     entry: scssFiles,
     output: {
-        path: path.resolve('./cartridges/int_woosmap/cartridge/static'),
+        path: path.resolve(`./cartridges/${cartridgeName}/cartridge/static`),
         filename: '[name].css'
     },
     module: {
@@ -82,6 +89,6 @@ module.exports = [{
         }]
     },
     plugins: [
-        new ExtractTextPlugin({ filename: '[name].css' })
+        new ExtractTextPlugin({filename: '[name].css'})
     ]
 }];
