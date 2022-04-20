@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="${URLUtils.staticURL('/css/storeLocatorWidgetBundle.css')}" />
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/storeLocatorWidget.css')}" />
