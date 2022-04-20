@@ -11,13 +11,6 @@ var Site = require("dw/system/Site");
 var ISML = require("dw/template/ISML");
 var URLUtils = require("dw/web/URLUtils");
 
-/**
- * @description this function renders the main dashboard page
- */
-exports.Dashboard = function () {
-    ISML.renderTemplate("storeLocatorWidget/mainDashboard");
-};
-exports.Dashboard.public = true;
 
 /**
  * @description this function renders / handles the configuration form

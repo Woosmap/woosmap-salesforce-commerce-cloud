@@ -12,7 +12,7 @@
         <name xml:lang="x-default">Store Locator Widget Config</name>
         <short_description xml:lang="x-default">Configure Store Locator Widget</short_description>
         <description xml:lang="x-default">Set your preferences for Woosmap Store Locator Widget</description>
-        <exec pipeline="StoreLocatorWidgetModule" node="Dashboard" />
+        <exec pipeline="StoreLocatorWidgetModule" node="Config" />
         <sub-pipelines>
             <pipeline name="StoreLocatorWidgetModule" />
         </sub-pipelines>

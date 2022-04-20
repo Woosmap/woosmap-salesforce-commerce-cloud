@@ -1,4 +1,4 @@
-<div class="flex module__buttons-container">
+<div class="flex menu__nav-container">
     <a class="button ${pdict.navigation == 'config' ? 'navCurrentTab' : ''}" href="${URLUtils.url('StoreLocatorWidgetModule-Config')}">
         ${Resource.msg('nav.config','storelocatorwidget',null)}
     </a>
