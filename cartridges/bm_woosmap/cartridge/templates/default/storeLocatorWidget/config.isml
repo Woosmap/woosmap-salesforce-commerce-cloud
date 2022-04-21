@@ -13,11 +13,11 @@
                         <label for="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.label, 'storelocatorwidget', null)}</span>
                         </label>
-                        <p>
-                            ${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.description, 'storelocatorwidget', null)}</p>
                         <input required id="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}" type="text"
                                name="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}"
                                value="${session.forms.slwconfig.woosmapPublicApiKey.htmlValue}">
+                        <p>
+                            ${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.description, 'storelocatorwidget', null)}</p>
                     </div>
 
                     <div class="form-row ${!session.forms.slwconfig.mobileBreakPoint.valid ? 'invalid-input' : ''}">
@@ -27,20 +27,21 @@
                         <input required id="${session.forms.slwconfig.mobileBreakPoint.htmlName}" type="number"
                                name="${session.forms.slwconfig.mobileBreakPoint.htmlName}"
                                value="${session.forms.slwconfig.mobileBreakPoint.htmlValue}">
-                        <p>${Resource.msg(session.forms.slwconfig.mobileBreakPoint.description, 'storelocatorwidget', null)}</p>
+                        <p>
+                            ${Resource.msg(session.forms.slwconfig.mobileBreakPoint.description, 'storelocatorwidget', null)}</p>
                     </div>
 
                     <div class="form-row ${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.label, 'storelocatorwidget', null)}</span>
                         </label>
-                        <p>
-                            ${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.description, 'storelocatorwidget', null)}</p>
                         <textarea class="json-textarea" required
                                   id="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}"
                                   name="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
                                    ${session.forms.slwconfig.storeLocatorWidgetConf.htmlValue}
                             </textarea>
+                        <p>
+                            ${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.description, 'storelocatorwidget', null)}</p>
                     </div>
 
                     <script type="text/javascript">
