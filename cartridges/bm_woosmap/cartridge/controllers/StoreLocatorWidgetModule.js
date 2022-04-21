@@ -20,6 +20,7 @@ exports.Config = function () {
     var currentSite = Site.current;
     if (!empty(form.submittedAction) && form.valid) {
         Transaction.wrap(function () {
+            currentSite.setCustomPreferenceValue('enableSLW', form.enableSLW.value);
             currentSite.setCustomPreferenceValue('woosmapPublicApiKey', form.woosmapPublicApiKey.value);
             currentSite.setCustomPreferenceValue('mobileBreakPoint', form.mobileBreakPoint.value);
             currentSite.setCustomPreferenceValue('storeLocatorWidgetConf', form.storeLocatorWidgetConf.value);
@@ -27,6 +28,7 @@ exports.Config = function () {
         response.redirect(URLUtils.url('StoreLocatorWidgetModule-Config'));
     } else if (empty(form.submittedAction)) {
         form.clearFormElement();
+        form.enableSLW.value = currentSite.getCustomPreferenceValue('enableSLW');
         form.woosmapPublicApiKey.value = currentSite.getCustomPreferenceValue('woosmapPublicApiKey');
         form.mobileBreakPoint.value = currentSite.getCustomPreferenceValue('mobileBreakPoint');
         form.storeLocatorWidgetConf.value = currentSite.getCustomPreferenceValue('storeLocatorWidgetConf');

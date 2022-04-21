@@ -9,6 +9,24 @@
                 <form method="post" action="${URLUtils.https('StoreLocatorWidgetModule-Config')}"
                       name="${session.forms.slwconfig.htmlName}">
 
+                    <div class="form-row">
+                        <label for="${session.forms.slwconfig.enableSLW.htmlName}">
+                            <span>${Resource.msg(session.forms.slwconfig.enableSLW.label, 'storelocatorwidget', null)}</span>
+                        </label>
+                        <select id="${session.forms.slwconfig.enableSLW.htmlName}" type="number"
+                                name="${session.forms.slwconfig.enableSLW.htmlName}">
+                            <isloop items="${session.forms.slwconfig.enableSLW.options}" var="option"
+                                    status="loopstatus">
+                                <option value="${option.htmlValue}" ${option.selected ?
+                                'selected' : ''}>
+                                ${Resource.msg(option.label, 'storelocatorwidget', null)}
+                                </option>
+                            </isloop>
+                        </select>
+                        <p>
+                            ${Resource.msg(session.forms.slwconfig.enableSLW.description, 'storelocatorwidget', null)}</p>
+                    </div>
+
                     <div class="form-row ${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.label, 'storelocatorwidget', null)}</span>

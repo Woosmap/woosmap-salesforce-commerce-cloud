@@ -1,9 +1,19 @@
 <?xml version="1.0"?>
 <form xmlns="http://www.demandware.com/xml/form/2008-04-19">
 
-    <field formid="woosmapPublicApiKey" label="woosmap.woosmapPublicApiKey.label" description="woosmap.woosmapPublicApiKey.description"  type="string" mandatory="true" />
-    <field formid="mobileBreakPoint" label="woosmap.mobileBreakPoint.label" description="woosmap.mobileBreakPoint.description"  type="integer"  mandatory="true" min="300" />
-    <field formid="storeLocatorWidgetConf" label="woosmap.storeLocatorWidgetConf.label" description="woosmap.storeLocatorWidgetConf.description"  type="string" />
+    <field formid="enableSLW" label="woosmap.enableSLW.label" description="woosmap.enableSLW.description" type="boolean"
+           mandatory="true">
+        <options>
+            <option optionid="yes" label="Yes" value="true"/>
+            <option optionid="no" label="No" value="false"/>
+        </options>
+    </field>
+    <field formid="woosmapPublicApiKey" label="woosmap.woosmapPublicApiKey.label"
+           description="woosmap.woosmapPublicApiKey.description" type="string" mandatory="true"/>
+    <field formid="mobileBreakPoint" label="woosmap.mobileBreakPoint.label"
+           description="woosmap.mobileBreakPoint.description" type="integer" mandatory="true" min="300"/>
+    <field formid="storeLocatorWidgetConf" label="woosmap.storeLocatorWidgetConf.label"
+           description="woosmap.storeLocatorWidgetConf.description" type="string"/>
     <action formid="save" label="woosmap.save.label" valid-form="true"/>
 
 </form>
