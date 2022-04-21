@@ -2,6 +2,13 @@
 <metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
     <type-extension type-id="SitePreferences">
         <custom-attribute-definitions>
+            <attribute-definition attribute-id="enableSLW">
+                <display-name xml:lang="x-default">Enable Woosmap Store Locator Widget</display-name>
+                <description xml:lang="x-default">Activate Woosmap Store Locator Widget in your website</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
             <attribute-definition attribute-id="woosmapPublicApiKey">
                 <display-name xml:lang="x-default">Woosmap Public Api Key</display-name>
                 <description xml:lang="x-default">Public Api Key for Woosmap</description>
@@ -12,7 +19,8 @@
             </attribute-definition>
             <attribute-definition attribute-id="mobileBreakPoint">
                 <display-name xml:lang="x-default">Mobile Break Point</display-name>
-                <description xml:lang="x-default">Render SLW in Mobile View when client screen is under this value</description>
+                <description xml:lang="x-default">Render SLW in Mobile View when client screen is under this value
+                </description>
                 <type>int</type>
                 <mandatory-flag>true</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
@@ -28,6 +36,7 @@
         <group-definitions>
             <attribute-group group-id="Woosmap">
                 <display-name xml:lang="x-default">Woosmap</display-name>
+                <attribute attribute-id="enableSLW"/>
                 <attribute attribute-id="woosmapPublicApiKey"/>
                 <attribute attribute-id="mobileBreakPoint"/>
                 <attribute attribute-id="storeLocatorWidgetConf"/>
