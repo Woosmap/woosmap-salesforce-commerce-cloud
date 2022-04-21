@@ -6,14 +6,11 @@ chai.use(chaiSubset);
 var request = require('request');
 var config = require('../it.config');
 
-
 describe('Store Locator Widget Integration', function () {
     this.timeout(5000);
 
     describe('StoreLocatorWidget display', function () {
-
-        it('should returns succesful response', function (done) {
-
+        it('should returns successful response', function (done) {
             var url = config.baseUrl + '/StoreLocatorWidget-Show';
             var myRequest = {
                 url: url,
@@ -29,6 +26,5 @@ describe('Store Locator Widget Integration', function () {
                 done();
             });
         });
-
     });
 });

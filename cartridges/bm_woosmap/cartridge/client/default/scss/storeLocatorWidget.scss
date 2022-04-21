@@ -1,130 +1,133 @@
 :root {
-  --woosmap-input-border: #bcc4d7;
-  --woosmap-light-gray: #D3D8E0;
-  --woosmap-secondary-color: #252525;
-  --woosmap-primary-color: #1E88E5;
-  --woosmap-red: #FF1744;
-  --woosmap-green: #1ee5de;
+    --woosmap-input-border: #bcc4d7;
+    --woosmap-light-gray: #d3d8e0;
+    --woosmap-secondary-color: #252525;
+    --woosmap-primary-color: #1e88e5;
+    --woosmap-red: #ff1744;
+    --woosmap-green: #1ee5de;
 }
 
 #bm_content_column {
-  padding: 0;
+    padding: 0;
 }
 
-#woosmap-dashboard-container{
-  margin: 3rem;
+#woosmap-dashboard-container {
+    margin: 3rem;
 }
 
 .table_title.main-dashboard__title {
-  color: var(--woosmap-primary-color);
-  margin-bottom: 0.5rem;
-  margin-top: 0;
+    color: var(--woosmap-primary-color);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
 .flex.menu__nav-container {
-  height: 5.5rem;
-  border-top: 0.1rem solid var(--woosmap-light-gray);
-  border-bottom: 0.1rem solid var(--woosmap-light-gray);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 1rem;
+    height: 5.5rem;
+    border-top: 0.1rem solid var(--woosmap-light-gray);
+    border-bottom: 0.1rem solid var(--woosmap-light-gray);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
 
-  a {
-    background: none;
-    border: 0;
-    color: var(--woosmap-secondary-color);
-    font-size: 1.4rem;
-    padding: 1.6rem 0;
-    margin: 0 1.6rem;
-  }
+    a {
+        background: none;
+        border: 0;
+        color: var(--woosmap-secondary-color);
+        font-size: 1.4rem;
+        padding: 1.6rem 0;
+        margin: 0 1.6rem;
+    }
 
-  a:first-child {
-    margin-left: 0;
-  }
+    a:first-child {
+        margin-left: 0;
+    }
 
-  a:hover {
-    color: var(--woosmap-primary-color);
-    text-decoration: none;
-  }
+    a:hover {
+        color: var(--woosmap-primary-color);
+        text-decoration: none;
+    }
 
-  .navCurrentTab {
-    font-weight: 600;
-    color: var(--woosmap-primary-color);
-    border-bottom: 0.3rem solid var(--woosmap-primary-color);
-    border-radius: 0;
-  }
+    .navCurrentTab {
+        font-weight: 600;
+        color: var(--woosmap-primary-color);
+        border-bottom: 0.3rem solid var(--woosmap-primary-color);
+        border-radius: 0;
+    }
 }
 
 .content-section {
-  form {
-    width: 38rem;
+    form {
+        width: 38rem;
 
-    .form-row {
-      display: flex;
-      flex-flow: column;
-      padding: 5% 0;
+        .form-row {
+            display: flex;
+            flex-flow: column;
+            padding: 5% 0;
 
-      input[type=text], select, textarea {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid var(--woosmap-input-border);
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-family: 'Roboto Mono', monospace;
-        &:focus{
-          background: white;
+            textarea {
+                width: auto;
+                min-height: 25rem;
+            }
+
+            input[type=text],
+            select,
+            textarea {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid var(--woosmap-input-border);
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-family: 'Roboto Mono', monospace;
+
+                &:focus {
+                    background: white;
+                }
+            }
+
+            label {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1;
+            }
+
+            input + label {
+                margin-top: 2rem;
+            }
+
+            > * {
+                flex: 1;
+            }
         }
-      }
 
-      textarea {
-        width: auto;
-        min-height: 25rem;
-      }
+        input[type=submit] {
+            background-color: var(--woosmap-primary-color);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-      label {
-        font-size: 1.125rem;
-        font-weight: 500;
-        line-height: 1;
-      }
-
-      input + label {
-        margin-top: 2rem;
-      }
-
-      > * {
-        flex: 1;
-      }
+        input[type=submit]:hover {
+            background-color: var(--woosmap-primary-color);
+        }
     }
 
-    input[type=submit] {
-      background-color: var(--woosmap-primary-color);
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+    table {
+        border-collapse: collapse;
+
+        tr {
+            border-bottom: 0.1rem solid var(--woosmap-light-gray);
+            vertical-align: text-top;
+
+            td {
+                padding: 2rem 1rem;
+                width: 100%;
+            }
+        }
     }
-
-    input[type=submit]:hover {
-      background-color: var(--woosmap-primary-color);
-    }
-  }
-
-  table {
-    border-collapse: collapse;
-
-    tr {
-      border-bottom: 0.1rem solid var(--woosmap-light-gray);
-      vertical-align: text-top;
-
-      td {
-        padding: 2rem 1rem;
-        width: 100%;
-      }
-    }
-  }
 }

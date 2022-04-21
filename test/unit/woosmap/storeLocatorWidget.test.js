@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-const assert = require("assert");
-const proxyquire = require("proxyquire").noCallThru();
+const assert = require('assert');
+const proxyquire = require('proxyquire').noCallThru();
 
 let SiteStub = {
     current: {
@@ -14,15 +14,15 @@ let SiteStub = {
                         provider: 'woosmap'
                     }
                 };
-            }
+            } return {};
         }
     }
 };
 
-describe("SLW Conf scripts test", function () {
-    const SLWConfPath = "../../../cartridges/int_woosmap/cartridge/scripts/slwConf";
+describe('SLW Conf scripts test', function () {
+    const SLWConfPath = '../../../cartridges/int_woosmap/cartridge/scripts/slwConf';
     const SLWConf = proxyquire(SLWConfPath, {
-        "dw/system/Site": SiteStub
+        'dw/system/Site': SiteStub
     });
 
     var expectedConf = {
@@ -33,8 +33,8 @@ describe("SLW Conf scripts test", function () {
             }
         }
     };
-    describe("getSLWConfJSON", function () {
-        it("should get Store Locator Widget Conf JSON string", function () {
+    describe('getSLWConfJSON', function () {
+        it('should get Store Locator Widget Conf JSON string', function () {
             var currentConf = SLWConf.getSLWConfJSON();
             assert.equal(currentConf, JSON.stringify(expectedConf, null, 4));
         });
