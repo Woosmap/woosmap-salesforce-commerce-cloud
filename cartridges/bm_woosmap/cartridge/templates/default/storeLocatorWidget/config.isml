@@ -9,7 +9,7 @@
                 <form method="post" action="${URLUtils.https('StoreLocatorWidgetModule-Config')}"
                       name="${session.forms.slwconfig.htmlName}">
 
-                    <div class="form-row ${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'red' : ''}">
+                    <div class="form-row ${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.label, 'storelocatorwidget', null)}</span>
                         </label>
@@ -20,7 +20,17 @@
                                value="${session.forms.slwconfig.woosmapPublicApiKey.htmlValue}">
                     </div>
 
-                    <div class="form-row ${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'red' : ''}">
+                    <div class="form-row ${!session.forms.slwconfig.mobileBreakPoint.valid ? 'invalid-input' : ''}">
+                        <label for="${session.forms.slwconfig.mobileBreakPoint.htmlName}">
+                            <span>${Resource.msg(session.forms.slwconfig.mobileBreakPoint.label, 'storelocatorwidget', null)}</span>
+                        </label>
+                        <input required id="${session.forms.slwconfig.mobileBreakPoint.htmlName}" type="number"
+                               name="${session.forms.slwconfig.mobileBreakPoint.htmlName}"
+                               value="${session.forms.slwconfig.mobileBreakPoint.htmlValue}">
+                        <p>${Resource.msg(session.forms.slwconfig.mobileBreakPoint.description, 'storelocatorwidget', null)}</p>
+                    </div>
+
+                    <div class="form-row ${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.label, 'storelocatorwidget', null)}</span>
                         </label>
@@ -34,17 +44,17 @@
                     </div>
 
                     <script type="text/javascript">
-                        function prettyPrint(elements) {
-                            for (var i = 0; i < elements.length; i++) {
-                                var ugly = elements.item(i).value;
-                                var obj = JSON.parse(ugly);
-                                var pretty = JSON.stringify(obj, undefined, 4);
-                                elements.item(i).value = pretty;
-                            }
+                      function prettyPrint (elements) {
+                        for (var i = 0; i < elements.length; i++) {
+                          var ugly = elements.item(i).value
+                          var obj = JSON.parse(ugly)
+                          var pretty = JSON.stringify(obj, undefined, 4)
+                          elements.item(i).value = pretty
                         }
+                      }
 
-                        var jsonAreas = document.getElementsByClassName("json-textarea");
-                        prettyPrint(jsonAreas)
+                      var jsonAreas = document.getElementsByClassName('json-textarea')
+                      prettyPrint(jsonAreas)
                     </script>
 
                     <input type="submit"

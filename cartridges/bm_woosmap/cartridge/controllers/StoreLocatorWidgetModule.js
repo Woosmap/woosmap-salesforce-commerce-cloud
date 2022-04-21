@@ -21,12 +21,14 @@ exports.Config = function () {
     if (!empty(form.submittedAction) && form.valid) {
         Transaction.wrap(function () {
             currentSite.setCustomPreferenceValue('woosmapPublicApiKey', form.woosmapPublicApiKey.value);
+            currentSite.setCustomPreferenceValue('mobileBreakPoint', form.mobileBreakPoint.value);
             currentSite.setCustomPreferenceValue('storeLocatorWidgetConf', form.storeLocatorWidgetConf.value);
         });
         response.redirect(URLUtils.url('StoreLocatorWidgetModule-Config'));
     } else if (empty(form.submittedAction)) {
         form.clearFormElement();
         form.woosmapPublicApiKey.value = currentSite.getCustomPreferenceValue('woosmapPublicApiKey');
+        form.mobileBreakPoint.value = currentSite.getCustomPreferenceValue('mobileBreakPoint');
         form.storeLocatorWidgetConf.value = currentSite.getCustomPreferenceValue('storeLocatorWidgetConf');
     }
 

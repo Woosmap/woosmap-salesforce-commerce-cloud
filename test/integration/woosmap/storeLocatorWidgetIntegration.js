@@ -7,7 +7,7 @@ describe('Store Locator Widget Integration', function () {
     this.timeout(5000);
 
     describe('StoreLocatorWidget display', function () {
-        it('should returns successful response with non empty woosmapPublicApiKey', function (done) {
+        it('should render the Store Locator Template with Configuration', function (done) {
             var url = config.baseUrl + '/StoreLocatorWidget-Show';
             var myRequest = {
                 url: url,

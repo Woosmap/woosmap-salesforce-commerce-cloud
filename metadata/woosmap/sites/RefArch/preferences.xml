@@ -19,6 +19,7 @@
     "routeProvider": "woosmap"
   }
 }</preference>
+            <preference preference-id="mobileBreakPoint">900</preference>
         </all-instances>
         <development/>
         <staging/>

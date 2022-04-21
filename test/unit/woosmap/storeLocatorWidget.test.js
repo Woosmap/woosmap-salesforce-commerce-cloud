@@ -8,6 +8,8 @@ let SiteStub = {
         getCustomPreferenceValue: function (params) {
             if (params === 'woosmapPublicApiKey') {
                 return 'woos-XXX-YYY';
+            } else if (params === 'mobileBreakPoint') {
+                return 900;
             } else if (params === 'storeLocatorWidgetConf') {
                 return {
                     maps: {
@@ -27,6 +29,7 @@ describe('SLW Conf scripts test', function () {
 
     var expectedConf = {
         woosmapPublicApiKey: 'woos-XXX-YYY',
+        mobileBreakPoint: 900,
         storeLocatorWidgetConf: {
             maps: {
                 provider: 'woosmap'

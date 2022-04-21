@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
     <content content-id="footer-locate-store">
-        <display-name xml:lang="x-default">Footer Locate Store</display-name>
-        <display-name xml:lang="fr-FR">Pied de page Localiser des magasins</display-name>
-        <display-name xml:lang="it-IT">Piè di pagina Trova negozio</display-name>
-        <display-name xml:lang="ja-JP">フッターの店舗検索</display-name>
-        <display-name xml:lang="zh-CN">页脚查找商店</display-name>
+        <display-name xml:lang="x-default">Store Locator Widget - Footer</display-name>
+        <display-name xml:lang="fr-FR">Store Locator Widget - Pied de page</display-name>
         <online-flag>true</online-flag>
         <searchable-flag>false</searchable-flag>
         <page-attributes/>
         <custom-attributes>
-            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;Locate Store&lt;/h4&gt;&lt;/a&gt;&#13;
-                &lt;span class="content"&gt;The Store Locator is designed to help you find the closest store near you.&lt;/span&gt;</custom-attribute>
-            <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;Localiser des magasins&lt;/h4&gt;&lt;/a&gt;&#13;
-                &lt;span class="content"&gt;Le localisateur de magasins vous aide à trouver le magasin le plus proche.&lt;/span&gt;</custom-attribute>
-            <custom-attribute attribute-id="body" xml:lang="it-IT">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;Trova negozio&lt;/h4&gt;&lt;/a&gt;&#13;
-                &lt;span class="content"&gt;Lo Store Locator è lo strumento che ti aiuta a trovare il negozio più vicino a te.&lt;/span&gt;</custom-attribute>
-            <custom-attribute attribute-id="body" xml:lang="ja-JP">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;店舗検索&lt;/h4&gt;&lt;/a&gt;&#13;
-                &lt;span class="content"&gt;「店舗検索」でお近くの店舗を検索していただけます。&lt;/span&gt;</custom-attribute>
-            <custom-attribute attribute-id="body" xml:lang="zh-CN">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;查找实体店&lt;/h4&gt;&lt;/a&gt;&#13;
-                &lt;span class="content"&gt;实体店地址搜索旨在帮助您查找周围最近的实体店。&lt;/span&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;Store Locator Widget&lt;/h4&gt;&lt;/a&gt;&#13;
+                &lt;span class="content"&gt;Store Locator Widget helps you find the closest store near you.&lt;/span&gt;</custom-attribute>
+            <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;a href="$httpsURL('StoreLocatorWidget-Show')$" class="menu-footer locate-store"&gt;&lt;h4&gt;Store Locator Widgets&lt;/h4&gt;&lt;/a&gt;&#13;
+                &lt;span class="content"&gt;Store Locator Widget vous aide à trouver le magasin le plus proche.&lt;/span&gt;</custom-attribute>
         </custom-attributes>
     </content>
 </library>

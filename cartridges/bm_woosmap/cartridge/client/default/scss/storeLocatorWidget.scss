@@ -65,12 +65,17 @@
             flex-flow: column;
             padding: 5% 0;
 
+            &.invalid-input input {
+                border-color: var(--woosmap-red);
+            }
+
             textarea {
                 width: auto;
                 min-height: 25rem;
             }
 
             input[type=text],
+            input[type=number],
             select,
             textarea {
                 width: 100%;

@@ -9,6 +9,7 @@ var Site = require('dw/system/Site');
 function getSLWConfJSON() {
     var slwConf = {
         woosmapPublicApiKey: Site.current.getCustomPreferenceValue('woosmapPublicApiKey'),
+        mobileBreakPoint: Site.current.getCustomPreferenceValue('mobileBreakPoint'),
         storeLocatorWidgetConf: Site.current.getCustomPreferenceValue('storeLocatorWidgetConf')
     };
 

@@ -6,9 +6,17 @@
                 <display-name xml:lang="x-default">Woosmap Public Api Key</display-name>
                 <description xml:lang="x-default">Public Api Key for Woosmap</description>
                 <type>string</type>
-                <mandatory-flag>false</mandatory-flag>
+                <mandatory-flag>true</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
                 <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="mobileBreakPoint">
+                <display-name xml:lang="x-default">Mobile Break Point</display-name>
+                <description xml:lang="x-default">Render SLW in Mobile View when client screen is under this value</description>
+                <type>int</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>900</default-value>
             </attribute-definition>
             <attribute-definition attribute-id="storeLocatorWidgetConf">
                 <display-name xml:lang="x-default">Store Locator Widget Configuration</display-name>
@@ -21,6 +29,7 @@
             <attribute-group group-id="Woosmap">
                 <display-name xml:lang="x-default">Woosmap</display-name>
                 <attribute attribute-id="woosmapPublicApiKey"/>
+                <attribute attribute-id="mobileBreakPoint"/>
                 <attribute attribute-id="storeLocatorWidgetConf"/>
             </attribute-group>
         </group-definitions>
