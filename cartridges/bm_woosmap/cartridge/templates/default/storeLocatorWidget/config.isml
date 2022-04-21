@@ -2,7 +2,7 @@
     <isinclude template="storeLocatorWidget/header"/>
     <div id="woosmap-dashboard-container">
         <h1 class="table_title main-dashboard__title">
-            ${Resource.msg('dashboard_title', 'storelocatorwidget', null)}</h1>
+            ${Resource.msg('woosmap.dashboard.label', 'storelocatorwidget', null)}</h1>
         <isinclude template="storeLocatorWidget/menu"/>
         <div class="content-section">
             <div id="config-section">
