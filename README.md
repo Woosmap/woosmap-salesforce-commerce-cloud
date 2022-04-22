@@ -42,11 +42,9 @@ Woosmap customer service.
 The Woosmap cartridges does not collect and process user profile information. For additional privacy information, please
 contact your Woosmap Account Manager.
 
-## Set up the Woosmap Cartridges
+## Implementation Guide
 
-### Implementation Guide
-
-#### Importing cartridges Using the CLI
+### Importing cartridges Using the CLI
 
 The CLI used here is [`sgmf-scripts`](https://github.com/SalesforceCommerceCloud/sgmf-scripts/). You could also upload
 the cartridges using [`dw-utils`](https://www.npmjs.com/package/dw-utils) or extensions for IntelliJ IDEA, VS code and
@@ -168,8 +166,28 @@ Widget Config**.
 ![BM Extension](documentation/images/bm-extension-details.jpg)
 
 
+## Testing
+Check integration test in folder `test/integration/woosmap` and unit test in folder `test/unit/woosmap`.
 
+## Operations, Maintenance
+Stores data come from Woosmap APIs. No Stores Data are hosted on SFCC.
 
+## User Guide
+
+### Business Manager
+See Implementation Guide, 
+
+### Storefront Functionality
+See Component Overview → Functional Overview section.
+
+### Known Issues
+No known issues
+
+### Release History
+
+| Version | Date       | Change          |
+|---------|------------|-----------------|
+| 22.1.0  | 2022-04-22 | Initial release |
 
 
 
