@@ -149,8 +149,7 @@ access to this module.
 1. Go to **Administration → Organization → Roles & Permissions**, and click on the *Administrator* role.
    ![Admin Role](documentation/images/role-permission.jpg)
 
-2. Switch to the **Business Manager Modules** tab, select your site name (e.g. `RefArch` for example), and click **
-   Apply**.
+2. Switch to the **Business Manager Modules** tab, select your site name (e.g. `RefArch` for example), and click **Apply**.
 
 3. Check the checkbox for **Woosmap** and click **Update** button
    ![Admin Role](documentation/images/role-activate-bm.jpg)
@@ -177,10 +176,10 @@ See Implementation Guide,
 ### Storefront Functionality
 See Component Overview → Functional Overview section.
 
-### Known Issues
+## Known Issues
 No known issues
 
-### Release History
+## Release History
 
 | Version | Date       | Change          |
 |---------|------------|-----------------|
