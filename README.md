@@ -103,3 +103,12 @@ Next, add the cartridge to the Business Manager:
 ![BM Cartridge Path](documentation/images/manage-buisiness-manager-path.jpg)
 
 
+### Import metadata
+1.Go to **Administration → Site Development → Site Import & Export**, and upload the `woosmap.zip` archive from the metadata folder.
+
+2.To import `woosmap.zip`, select the radio button next to it and click the import button.
+![Metadata Import](documentation/images/metadata-import.jpg)
+
+3. Check the import is successful.
+![Metadata Import Success](documentation/images/metadata-import-success.jpg)
+
