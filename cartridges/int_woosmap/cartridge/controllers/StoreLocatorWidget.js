@@ -40,9 +40,10 @@ server.get(
                 }
             } else {
                 WoosmapLogger.error('StoreLocatorWidget Invalid Woosmap API Key');
+                res.base.redirect(require('dw/web/URLUtils').url('Stores-Find', 'showMap', true));
             }
         } else {
-            res.base.redirect(require('dw/web/URLUtils').url('Stores-Find', 'showMap', true, 'horizontalView', true, 'isForm', true));
+            res.base.redirect(require('dw/web/URLUtils').url('Stores-Find', 'showMap', true));
         }
     }
 );
