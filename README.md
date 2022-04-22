@@ -5,12 +5,21 @@ Woosmap’s Link Cartridge add to your Salesforce Commerce Cloud website an adva
 To match your preferences and website’s graphic style, all the properties of your Store Locator Widget can be customised
 through the Salesforce Business Manager.
 
-Integration relies on Woosmap APIs. Please check <https://developers.woosmap.com/>
-The integration consists of a new cartridge, and no changes on SFRA base cartridge is needed. It does modifications of
-metadata for system object types and site custom preferences. Introduces a new controller, Storelocator, some templates,
-and uses VueJS for instant DOM updates, without browser refresh.
+Integration relies on Woosmap APIs. Please check <https://developers.woosmap.com/support/api-keys/> to get a public API Key.
 
-## Set up the Woosmap Cartridge
+## Summary
+This document provides technical instructions for using the Woosmap SFCC Cartridges to integrate the Woosmap Store Locator Widget into the SFCC storefront.
+
+#### Glossary
+
+| Term                      | Description                                                                  |
+|---------------------------|------------------------------------------------------------------------------|
+| **SFCC**                  | SalesForce Commerce Cloud                                                    |
+| **Business Manager (BM)** | The primary tool used to configure the SFCC platform and customer storefront |
+| **SFRA**                  | StoreFront Reference Architecture                                            |
+
+
+## Set up the Woosmap Cartridges
 
 ### Installation
 
