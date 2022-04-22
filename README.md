@@ -88,11 +88,8 @@ npm run uploadCartridge
 
 ### Enable the cartridges on your site
 
-1. Go to **Administration → Sites → Manage Sites**.
-
-Select your desired site from the **Storefront Site** list:
+1. Go to **Administration → Sites → Manage Sites** and select your desired site from the **Storefront Site** list:
 ![Select StoreFront Site](documentation/images/select-storefront-site.jpg)
-
 
 2. Go to the **Settings** tab. If your site is based on SFRA, add **int_woosmap** at the beginning of your cartridge path.
 ![Int Cartridge Path](documentation/images/add-int-woosmap-cartridge-path.jpg)
