@@ -5,7 +5,7 @@
         <name xml:lang="x-default">Woosmap</name>
         <short_description xml:lang="x-default">Modules to manage Woosmap</short_description>
         <description xml:lang="x-default">Helps manage the Woosmap Integration</description>
-        <icon>images/woosmap_logo.png</icon>
+        <icon>images/woosmap-logo-bullet.png</icon>
     </menuitem>
 
     <menuaction id="custom_module_woosmap_submenu" menupath="custom_module_woosmap" position="1" site="true">
@@ -16,7 +16,7 @@
         <sub-pipelines>
             <pipeline name="StoreLocatorWidgetModule" />
         </sub-pipelines>
-        <icon>images/woosmap_logo.png</icon>
+        <icon>images/woosmap-logo-bullet.png</icon>
     </menuaction>
 
 </extensions>

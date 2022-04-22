@@ -17,10 +17,12 @@
 }
 
 .page-title {
-    color: var(--woosmap-primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.6rem;
-    margin-top: 0;
+    h1 {
+        color: var(--woosmap-primary-color);
+        margin-bottom: 0.5rem;
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
 }
 
 .nav-container {
