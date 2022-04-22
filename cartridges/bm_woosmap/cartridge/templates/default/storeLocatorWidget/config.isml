@@ -1,15 +1,15 @@
 <isdecorate template="application/MenuFrame">
     <isinclude template="storeLocatorWidget/header"/>
     <div id="woosmap-dashboard-container">
-        <h1 class="table_title main-dashboard__title">
+        <h1 class="page-title">
             ${Resource.msg('woosmap.dashboard.label', 'storelocatorwidget', null)}</h1>
         <isinclude template="storeLocatorWidget/menu"/>
-        <div class="content-section">
+        <div class="form-section">
             <div id="config-section">
                 <form method="post" action="${URLUtils.https('StoreLocatorWidgetModule-Config')}"
                       name="${session.forms.slwconfig.htmlName}">
 
-                    <div class="form-row">
+                    <div class="form-group">
                         <label for="${session.forms.slwconfig.enableSLW.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.enableSLW.label, 'storelocatorwidget', null)}</span>
                         </label>
@@ -27,7 +27,7 @@
                             ${Resource.msg(session.forms.slwconfig.enableSLW.description, 'storelocatorwidget', null)}</p>
                     </div>
 
-                    <div class="form-row ${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'invalid-input' : ''}">
+                    <div class="form-group${!session.forms.slwconfig.woosmapPublicApiKey.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.woosmapPublicApiKey.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.label, 'storelocatorwidget', null)}</span>
                         </label>
@@ -38,7 +38,7 @@
                             ${Resource.msg(session.forms.slwconfig.woosmapPublicApiKey.description, 'storelocatorwidget', null)}</p>
                     </div>
 
-                    <div class="form-row ${!session.forms.slwconfig.mobileBreakPoint.valid ? 'invalid-input' : ''}">
+                    <div class="form-group${!session.forms.slwconfig.mobileBreakPoint.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.mobileBreakPoint.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.mobileBreakPoint.label, 'storelocatorwidget', null)}</span>
                         </label>
@@ -49,7 +49,7 @@
                             ${Resource.msg(session.forms.slwconfig.mobileBreakPoint.description, 'storelocatorwidget', null)}</p>
                     </div>
 
-                    <div class="form-row ${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'invalid-input' : ''}">
+                    <div class="form-group${!session.forms.slwconfig.storeLocatorWidgetConf.valid ? 'invalid-input' : ''}">
                         <label for="${session.forms.slwconfig.storeLocatorWidgetConf.htmlName}">
                             <span>${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.label, 'storelocatorwidget', null)}</span>
                         </label>

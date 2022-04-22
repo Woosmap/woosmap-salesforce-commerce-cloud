@@ -2,6 +2,7 @@
     --woosmap-input-border: #bcc4d7;
     --woosmap-light-gray: #d3d8e0;
     --woosmap-secondary-color: #252525;
+    --woosmap-gray: #616061;
     --woosmap-primary-color: #1e88e5;
     --woosmap-red: #ff1744;
     --woosmap-green: #1ee5de;
@@ -15,13 +16,14 @@
     margin: 3rem;
 }
 
-.table_title.main-dashboard__title {
+.page-title {
     color: var(--woosmap-primary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.6rem;
     margin-top: 0;
 }
 
-.flex.menu__nav-container {
+.nav-container {
     height: 5.5rem;
     border-top: 0.1rem solid var(--woosmap-light-gray);
     border-bottom: 0.1rem solid var(--woosmap-light-gray);
@@ -37,6 +39,7 @@
         font-size: 1.4rem;
         padding: 1.6rem 0;
         margin: 0 1.6rem;
+        text-decoration: none;
     }
 
     a:first-child {
@@ -48,7 +51,7 @@
         text-decoration: none;
     }
 
-    .navCurrentTab {
+    .current {
         font-weight: 600;
         color: var(--woosmap-primary-color);
         border-bottom: 0.3rem solid var(--woosmap-primary-color);
@@ -56,11 +59,11 @@
     }
 }
 
-.content-section {
+.form-section {
     form {
         width: 38rem;
 
-        .form-row {
+        .form-group {
             display: flex;
             flex-flow: column;
             padding: 5% 0;
@@ -72,6 +75,10 @@
             textarea {
                 width: auto;
                 min-height: 25rem;
+            }
+
+            p {
+                color: var(--woosmap-gray);
             }
 
             input[type=text],

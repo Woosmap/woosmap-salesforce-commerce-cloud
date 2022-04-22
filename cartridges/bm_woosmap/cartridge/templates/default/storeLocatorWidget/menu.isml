@@ -1,5 +1,5 @@
-<div class="flex menu__nav-container">
-    <a class="button ${pdict.navigation == 'config' ? 'navCurrentTab' : ''}" href="${URLUtils.url('StoreLocatorWidgetModule-Config')}">
+<div class="flex nav-container">
+    <a class="${pdict.navigation == 'config' ? 'current' : ''}" href="${URLUtils.url('StoreLocatorWidgetModule-Config')}">
         ${Resource.msg('woosmap.config.label','storelocatorwidget',null)}
     </a>
 </div>
