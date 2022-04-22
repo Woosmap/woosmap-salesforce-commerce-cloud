@@ -106,7 +106,7 @@ Next, add the cartridge to the Business Manager:
 ### Import metadata
 The metadata linked to the cartridge contain mandatory **Custom Preferences** for Woosmap as well as default behaviour to access the store locator page (a link in the footer).
 
-Before upading the metadata to your SFCC storefront, adapt the following to youir site:
+Before uploading the metadata to your SFCC storefront, adapt the following to youir site:
 1. Under `metadata/woosmap/libraries`, rename the folder `RefArchSharedLibrary` to match the ID of your library. 
 2. Open the `metadata/woosmap/libraries/RefArchSharedLibrary/library.xml` file and rename the `library-id` attribute to match your own.
 3. Under `metadata/woosmap/sites`, rename the folder `RefArch` to match the id of your site.
