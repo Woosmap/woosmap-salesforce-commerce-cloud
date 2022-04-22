@@ -104,9 +104,18 @@ Next, add the cartridge to the Business Manager:
 
 
 ### Import metadata
-1.Go to **Administration → Site Development → Site Import & Export**, and upload the `woosmap.zip` archive from the metadata folder.
+The metadata linked to the cartridge contain mandatory **Custom Preferences** for Woosmap as well as default behaviour to access the store locator page (a link in the footer).
 
-2.To import `woosmap.zip`, select the radio button next to it and click the import button.
+Before upading the metadata to your SFCC storefront, adapt the following to youir site:
+1. Under `metadata/woosmap/libraries`, rename the folder `RefArchSharedLibrary` to match the ID of your library. 
+2. Open the `metadata/woosmap/libraries/RefArchSharedLibrary/library.xml` file and rename the `library-id` attribute to match your own.
+3. Under `metadata/woosmap/sites`, rename the folder `RefArch` to match the id of your site.
+4. Compress as a Zip file the metadata folder `metadata/woosmap`.
+
+You can then upload your metadata.
+1. Go to **Administration → Site Development → Site Import & Export**, and upload the `woosmap.zip` archive from the metadata folder.
+
+2. To import `woosmap.zip`, select the radio button next to it and click the import button.
 ![Metadata Import](documentation/images/metadata-import.jpg)
 
 3. Check the import is successful.
