@@ -6,7 +6,9 @@ const proxyquire = require('proxyquire').noCallThru();
 let SiteStub = {
     current: {
         getCustomPreferenceValue: function (params) {
-            if (params === 'woosmapPublicApiKey') {
+            if (params === 'enableSLW') {
+                return true;
+            } else if (params === 'woosmapPublicApiKey') {
                 return 'woos-XXX-YYY';
             } else if (params === 'mobileBreakPoint') {
                 return 900;
@@ -28,6 +30,7 @@ describe('SLW Conf scripts test', function () {
     });
 
     var expectedConf = {
+        enableSLW: true,
         woosmapPublicApiKey: 'woos-XXX-YYY',
         mobileBreakPoint: 900,
         storeLocatorWidgetConf: {
