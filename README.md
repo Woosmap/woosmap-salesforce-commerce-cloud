@@ -27,10 +27,8 @@ The following cartridges are available to integrate with your SFCC storefronts:
 
 | Cartridge Name  | Description                                                                                                                   |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **
-int_woosmap** | Handles the display of the Woosmap Store Locator Widget in your SFCC website.                                                 |
-| **
-bm_woosmap**  | Allows you to customise the Woosmap Store Locator Widget look and feel to match your preferences and website’s graphic style. |
+| **int_woosmap** | Handles the display of the Woosmap Store Locator Widget in your SFCC website.                                                 |
+| **bm_woosmap**  | Allows you to customise the Woosmap Store Locator Widget look and feel to match your preferences and website’s graphic style. |
 
 ### Limitations, Constraints
 
