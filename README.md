@@ -8,6 +8,9 @@ through the Salesforce Business Manager.
 This document provides technical instructions for using the Woosmap SFCC Cartridges to integrate the Woosmap Store
 Locator Widget into the SFCC storefront.
 
+![Store locator](documentation/images/sl.jpg)
+
+
 #### Glossary
 
 | Term                      | Description                                                                  |
@@ -133,14 +136,10 @@ Select Woosmap and you should see fields for cartridge setup.
 
 | Field                                   | Description                                                                                  |
 |-----------------------------------------|----------------------------------------------------------------------------------------------|
-| **Enable Woosmap Store Locator
-Widget** | Activate Woosmap Store Locator Widget in your website                                        |
-| **Woosmap Public Api
-Key***             | Public Api Key for Woosmap                                                                   |
-| **Mobile Break
-Point**                  | Render Store Locator Widget in Mobile View when client screen is under this value (in pixel) |
-| **Store Locator Widget
-Configuration**  | JSON description of Store Locator Widget configuration                                       |
+| **Enable Woosmap Store Locator Widget** | Activate Woosmap Store Locator Widget in your website                                        |
+| **Woosmap Public Api Key***             | Public Api Key for Woosmap                                                                   |
+| **Mobile Break Point**                  | Render Store Locator Widget in Mobile View when client screen is under this value (in pixel) |
+| **Store Locator Widget Configuration**  | JSON description of Store Locator Widget configuration                                       |
 
 ### Activate the Business Manager Extension
 
