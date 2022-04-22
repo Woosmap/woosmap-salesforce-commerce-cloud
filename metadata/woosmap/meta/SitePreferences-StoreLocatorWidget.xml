@@ -19,7 +19,8 @@
             </attribute-definition>
             <attribute-definition attribute-id="mobileBreakPoint">
                 <display-name xml:lang="x-default">Mobile Break Point</display-name>
-                <description xml:lang="x-default">Render SLW in Mobile View when client screen is under this value
+                <description xml:lang="x-default">Render SLW in Mobile View when client screen is under this value (in
+                    pixel)
                 </description>
                 <type>int</type>
                 <mandatory-flag>true</mandatory-flag>
@@ -28,6 +29,7 @@
             </attribute-definition>
             <attribute-definition attribute-id="storeLocatorWidgetConf">
                 <display-name xml:lang="x-default">Store Locator Widget Configuration</display-name>
+                <description xml:lang="x-default">JSON description of Store Locator Widget configuration</description>
                 <type>text</type>
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>
