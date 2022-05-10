@@ -1,20 +1,55 @@
-## Introduction
+## Summary
 
 Woosmap’s Link Cartridge add to your Salesforce Commerce Cloud website an advanced Store Locator Widget.
 
 To match your preferences and website’s graphic style, all the properties of your Store Locator Widget can be customised
 through the Salesforce Business Manager.
 
-Integration relies on Woosmap APIs. Please check <https://developers.woosmap.com/>
-The integration consists of a new cartridge, and no changes on SFRA base cartridge is needed. It does modifications of
-metadata for system object types and site custom preferences. Introduces a new controller, Storelocator, some templates,
-and uses VueJS for instant DOM updates, without browser refresh.
+This document provides technical instructions for using the Woosmap SFCC Cartridges to integrate the Woosmap Store
+Locator Widget into the SFCC storefront.
 
-## Set up the Woosmap Cartridge
+![Store locator](documentation/images/sl.jpg)
 
-### Installation
 
-#### Using the CLI
+#### Glossary
+
+| Term                      | Description                                                                  |
+|---------------------------|------------------------------------------------------------------------------|
+| **SFCC**                  | SalesForce Commerce Cloud                                                    |
+| **Business Manager (BM)** | The primary tool used to configure the SFCC platform and customer storefront |
+| **SFRA**                  | StoreFront Reference Architecture                                            |
+
+## Component Overview
+
+### Functional Overview
+
+The Woosmap cartridge allows the customer to connect to a customized Store Locator displaying stores on a map. Woosmap
+cartridge replaces the internal SFCC Store Locator with the Woosmap Store Locator Widget.
+
+The following cartridges are available to integrate with your SFCC storefronts:
+
+| Cartridge Name  | Description                                                                                                                   |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **int_woosmap** | Handles the display of the Woosmap Store Locator Widget in your SFCC website.                                                 |
+| **bm_woosmap**  | Allows you to customise the Woosmap Store Locator Widget look and feel to match your preferences and website’s graphic style. |
+
+### Limitations, Constraints
+
+Use of the Woosmap cartridges requires keys from Woosmap. Please register on <https://www.woosmap.com> and contact
+Woosmap customer service.
+
+### Privacy
+
+The Woosmap cartridges does not collect and process user profile information. For additional privacy information, please
+contact your Woosmap Account Manager.
+
+## Implementation Guide
+
+### Importing cartridges Using the CLI
+
+The CLI used here is [`sgmf-scripts`](https://github.com/SalesforceCommerceCloud/sgmf-scripts/). You could also upload
+the cartridges using [`dw-utils`](https://www.npmjs.com/package/dw-utils) or extensions for IntelliJ IDEA, VS code and
+Eclipse.
 
 1. Download the cartridge source from the Partner Marketplace.
 2. Unzip the directory
@@ -53,10 +88,99 @@ npm run uploadCartridge
 
 ### Enable the cartridges on your site
 
-Woosmap provides the following cartridges to integrate with your SFCC storefronts:
+1. Go to **Administration → Sites → Manage Sites** and select your desired site from the **Storefront Site** list:
+   ![Select StoreFront Site](documentation/images/select-storefront-site.jpg)
 
-| Cartridge Name  | Description                                                                                                                   |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **int_woosmap** | Handles the display of the Woosmap Store Locator Widget in your SFCC website.                                                 |
-| **bm_woosmap**  | Allows you to customise the Woosmap Store Locator Widget look and feel to match your preferences and website’s graphic style. |
+2. Go to the **Settings** tab. If your site is based on SFRA, add **int_woosmap** at the beginning of your cartridge
+   path.
+   ![Int Cartridge Path](documentation/images/add-int-woosmap-cartridge-path.jpg)
 
+Next, add the cartridge to the Business Manager:
+
+1. Go back to **Administration → Sites → Manage Sites** and click on **Manage the Business Manager Site**.
+   ![BM Cartridge](documentation/images/manage-buisiness-manager.jpg)
+
+2. Go to the **Settings** tab, and add **bm_woosmap:int_woosmap** at the end of your cartridge path.
+   ![BM Cartridge Path](documentation/images/manage-buisiness-manager-path.jpg)
+
+### Import metadata
+
+The metadata linked to the cartridge contain mandatory **Custom Preferences** for Woosmap as well as default behaviour
+to access the store locator page (a link in the footer).
+
+Before uploading the metadata to your SFCC storefront, adapt the following to youir site:
+
+1. Under `metadata/woosmap/libraries`, rename the folder `RefArchSharedLibrary` to match the ID of your library.
+2. Open the `metadata/woosmap/libraries/RefArchSharedLibrary/library.xml` file and rename the `library-id` attribute to
+   match your own.
+3. Under `metadata/woosmap/sites`, rename the folder `RefArch` to match the id of your site.
+4. Compress as a Zip file the metadata folder `metadata/woosmap`.
+
+You can then upload your metadata.
+
+1. Go to **Administration → Site Development → Site Import & Export**, and upload the `woosmap.zip` archive from the
+   metadata folder.
+
+2. To import `woosmap.zip`, select the radio button next to it and click the import button.
+   ![Metadata Import](documentation/images/metadata-import.jpg)
+
+3. Check the import is successful.
+   ![Metadata Import Success](documentation/images/metadata-import-success.jpg)
+
+After import is successfully done, you should see the new Woosmap Custom Preferences in **Merchant Tools → Site
+Preferences → Custom Preferences → Woosmap**.
+![Custom Prefs](documentation/images/custom-pref.jpg)
+
+Select Woosmap and you should see fields for cartridge setup.
+![Custom Prefs](documentation/images/custom-pref-details.jpg)
+
+| Field                                   | Description                                                                                  |
+|-----------------------------------------|----------------------------------------------------------------------------------------------|
+| **Enable Woosmap Store Locator Widget** | Activate Woosmap Store Locator Widget in your website                                        |
+| **Woosmap Public Api Key***             | Public Api Key for Woosmap                                                                   |
+| **Mobile Break Point**                  | Render Store Locator Widget in Mobile View when client screen is under this value (in pixel) |
+| **Store Locator Widget Configuration**  | JSON description of Store Locator Widget configuration                                       |
+
+### Activate the Business Manager Extension
+
+In order to access the **BM Woosmap Extension** and configure your preferences, you need to give administrator roles
+access to this module.
+
+1. Go to **Administration → Organization → Roles & Permissions**, and click on the *Administrator* role.
+   ![Admin Role](documentation/images/role-permission.jpg)
+
+2. Switch to the **Business Manager Modules** tab, select your site name (e.g. `RefArch` for example), and click **Apply**.
+
+3. Check the checkbox for **Woosmap** and click **Update** button
+   ![Admin Role](documentation/images/role-activate-bm.jpg)
+
+A new menu should now appear in **Merchants Tools**.
+![Menu Merchants](documentation/images/merchant.jpg)
+
+To configure the Woosmap Store Locator Widget through the BM extension go to **Merchants Tools → Woosmap → Store Locator
+Widget Config**.
+![BM Extension](documentation/images/bm-extension-details.jpg)
+
+
+## Testing
+Check integration test in folder `test/integration/woosmap` and unit test in folder `test/unit/woosmap`.
+
+## Operations, Maintenance
+Stores data come from Woosmap APIs. No Stores Data are hosted on SFCC.
+
+## User Guide
+
+### Business Manager
+See Implementation Guide, 
+
+### Storefront Functionality
+See Component Overview → Functional Overview section.
+
+## Known Issues
+No known issues
+
+## Release History
+
+| Version | Date       | Change          |
+|---------|------------|-----------------|
+| 22.1.0  | 2022-04-22 | Initial release |
