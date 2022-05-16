@@ -14,11 +14,7 @@
     "upload": "sgmf-scripts --upload",
     "uploadCartridge": "sgmf-scripts --uploadCartridge int_woosmap && sgmf-scripts --uploadCartridge bm_woosmap",
     "watch": "sgmf-scripts --watch",
-    "watch:static": "sgmf-scripts --watch static",
-    "init:isml": "./node_modules/.bin/isml-linter --init",
-    "lint:isml": "./node_modules/.bin/isml-linter",
-    "build:isml": "./node_modules/.bin/isml-linter --build",
-    "fix:isml": "./node_modules/.bin/isml-linter --autofix"
+    "watch:static": "sgmf-scripts --watch static"
   },
   "repository": {
     "type": "git",
