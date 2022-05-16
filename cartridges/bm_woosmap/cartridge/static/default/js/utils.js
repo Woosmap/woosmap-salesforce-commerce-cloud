@@ -1,3 +1,7 @@
+/**
+ * @description Pretty Print JSON in all Text Areas which have the className 'json-textarea'
+ */
+
 function prettyPrint(elements) {
     for (var i = 0; i < elements.length; i++) {
         var ugly = elements.item(i).value;

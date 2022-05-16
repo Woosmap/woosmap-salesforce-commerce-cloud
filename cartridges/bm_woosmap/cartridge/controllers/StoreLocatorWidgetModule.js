@@ -3,7 +3,7 @@
 /* global empty session response */
 
 /**
- * Controller for managing the Woosmap Store Locator Widget Business Manager module
+ * @description Controller for managing the Woosmap Store Locator Widget Business Manager module
  * @module controllers/StoreLocatorWidget
  */
 
