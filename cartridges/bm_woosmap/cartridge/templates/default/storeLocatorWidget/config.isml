@@ -63,19 +63,7 @@
                             ${Resource.msg(session.forms.slwconfig.storeLocatorWidgetConf.description, 'storelocatorwidget', null);}</p>
                     </div>
 
-                    <script type="text/javascript">
-                        function prettyPrint(elements) {
-                            for (var i = 0; i < elements.length; i++) {
-                                var ugly = elements.item(i).value;
-                                var obj = JSON.parse(ugly);
-                                var pretty = JSON.stringify(obj, undefined, 4);
-                                elements.item(i).value = pretty;
-                            }
-                        }
-
-                        var jsonAreas = document.getElementsByClassName('json-textarea');
-                        prettyPrint(jsonAreas);
-                    </script>
+                    <script src="${URLUtils.staticURL('/js/utils.js')}" type="text/javascript"></script>
 
                     <input type="submit"
                            value="${Resource.msg(session.forms.slwconfig.save.label, 'storelocatorwidget', null)}"
