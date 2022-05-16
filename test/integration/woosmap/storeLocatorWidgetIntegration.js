@@ -1,3 +1,5 @@
+'use strict';
+
 var assert = require('chai').assert;
 var cheerio = require('cheerio');
 var request = require('request-promise');

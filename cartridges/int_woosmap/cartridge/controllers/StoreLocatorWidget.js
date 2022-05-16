@@ -15,7 +15,6 @@ var WoosmapLogger = Logger.getLogger('WoosmapLogger', 'WoosmapLogger');
 
 var slwConf = require('*/cartridge/scripts/slwConf');
 
-
 /**
  * @description Provides required data for store locator and renders the start template.
  */
@@ -49,4 +48,3 @@ server.get(
 );
 
 module.exports = server.exports();
-

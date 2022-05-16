@@ -8,17 +8,21 @@ let SiteStub = {
         getCustomPreferenceValue: function (params) {
             if (params === 'enableSLW') {
                 return true;
-            } else if (params === 'woosmapPublicApiKey') {
+            }
+            if (params === 'woosmapPublicApiKey') {
                 return 'woos-XXX-YYY';
-            } else if (params === 'mobileBreakPoint') {
+            }
+            if (params === 'mobileBreakPoint') {
                 return 900;
-            } else if (params === 'storeLocatorWidgetConf') {
+            }
+            if (params === 'storeLocatorWidgetConf') {
                 return {
                     maps: {
                         provider: 'woosmap'
                     }
                 };
-            } return {};
+            }
+            return {};
         }
     }
 };
@@ -46,4 +50,3 @@ describe('SLW Conf scripts test', function () {
         });
     });
 });
-
