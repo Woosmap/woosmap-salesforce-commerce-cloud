@@ -35,7 +35,7 @@ The following cartridges are available to integrate with your SFCC storefronts:
 
 ### Limitations, Constraints
 
-Use of the Woosmap cartridges requires keys from Woosmap. Please register on <https://www.woosmap.com> and contact
+Use of the Woosmap cartridges requires keys from Woosmap. Please register on [woosmap](https://www.woosmap.com/sign_up?utm_source=Github) and contact
 Woosmap customer service.
 
 ### Privacy
