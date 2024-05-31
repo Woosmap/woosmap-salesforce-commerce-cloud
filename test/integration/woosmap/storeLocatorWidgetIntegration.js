@@ -2,7 +2,7 @@
 
 var assert = require('chai').assert;
 var cheerio = require('cheerio');
-var request = require('request-promise');
+var axios = require('axios');
 var config = require('../it.config');
 
 describe('Store Locator Widget Integration', function () {
@@ -20,9 +20,9 @@ describe('Store Locator Widget Integration', function () {
                 }
             };
 
-            request(myRequest, function (error, response) {
-                assert.equal(response.statusCode, 200, 'Expected statusCode to be 200.');
-                var $ = cheerio.load(response.body);
+            axios.request(myRequest).then((response) => {
+                assert.equal(response.status, 200, 'Expected statusCode to be 200.');
+                var $ = cheerio.load(response.data);
                 var slwConf = JSON.parse($('#slw-conf').text());
                 assert.isTrue(slwConf.woosmapPublicApiKey.startsWith('woos-'));
                 done();

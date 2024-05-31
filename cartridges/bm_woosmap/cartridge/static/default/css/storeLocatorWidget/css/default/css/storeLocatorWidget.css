@@ -1,0 +1,142 @@
+:root {
+  --woosmap-input-border: #bcc4d7;
+  --woosmap-light-gray: #d3d8e0;
+  --woosmap-secondary-color: #252525;
+  --woosmap-gray: #616061;
+  --woosmap-primary-color: #1e88e5;
+  --woosmap-red: #ff1744;
+  --woosmap-green: #1ee5de;
+}
+
+#bm-content-column {
+  padding: 0;
+}
+
+#woosmap-dashboard-container {
+  margin: 3rem;
+}
+
+.page-title h1 {
+  color: var(--woosmap-primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.nav-container {
+  height: 5.5rem;
+  border-top: 0.1rem solid var(--woosmap-light-gray);
+  border-bottom: 0.1rem solid var(--woosmap-light-gray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.nav-container a {
+  background: none;
+  border: 0;
+  color: var(--woosmap-secondary-color);
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+  margin: 0 1.6rem;
+  text-decoration: none;
+}
+.nav-container a:first-child {
+  margin-left: 0;
+}
+.nav-container a:hover {
+  color: var(--woosmap-primary-color);
+  text-decoration: none;
+}
+.nav-container .current {
+  font-weight: 600;
+  color: var(--woosmap-primary-color);
+  border-bottom: 0.3rem solid var(--woosmap-primary-color);
+  border-radius: 0;
+}
+
+.form-section form {
+  width: 38rem;
+}
+.form-section form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 5% 0;
+}
+.form-section form .form-group.invalid-input input {
+  border-color: var(--woosmap-red);
+}
+.form-section form .form-group textarea {
+  width: auto;
+  min-height: 25rem;
+}
+.form-section form .form-group p {
+  color: var(--woosmap-gray);
+}
+.form-section form .form-group input[type=text],
+.form-section form .form-group input[type=number],
+.form-section form .form-group select,
+.form-section form .form-group textarea {
+  width: 100%;
+  padding: 0.75em 1.25em;
+  margin: 0.5em 0;
+  display: inline-block;
+  border: 1px solid var(--woosmap-input-border);
+  border-radius: 0.25em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+.form-section form .form-group input[type=text]:focus,
+.form-section form .form-group input[type=number]:focus,
+.form-section form .form-group select:focus,
+.form-section form .form-group textarea:focus {
+  background: white;
+}
+.form-section form .form-group label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.form-section form .form-group input + label {
+  margin-top: 2rem;
+}
+.form-section form .form-group > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.form-section form input[type=submit] {
+  background-color: var(--woosmap-primary-color);
+  color: white;
+  padding: 0.75em 1.25em;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.form-section form input[type=submit]:hover {
+  background-color: var(--woosmap-primary-color);
+}
+.form-section table {
+  border-collapse: collapse;
+}
+.form-section table tr {
+  border-bottom: 0.1rem solid var(--woosmap-light-gray);
+  vertical-align: text-top;
+}
+.form-section table tr td {
+  padding: 2rem 1rem;
+  width: 100%;
+}

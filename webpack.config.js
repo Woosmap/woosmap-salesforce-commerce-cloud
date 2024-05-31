@@ -2,7 +2,7 @@
 
 var path = require('path');
 var webpack = require('sgmf-scripts').webpack;
-var ExtractTextPlugin = require('sgmf-scripts')['extract-text-webpack-plugin'];
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var jsFiles = require('sgmf-scripts').createJsPath();
 var scssFiles = require('sgmf-scripts').createScssPath();
 
@@ -62,33 +62,49 @@ module.exports = [{
     module: {
         rules: [{
             test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                use: [{
+            use: [
+                MiniCssExtractPlugin.loader,
+                {
                     loader: 'css-loader',
                     options: {
-                        url: false,
-                        minimize: true
+                        url: false
                     }
-                }, {
+                },
+                {
                     loader: 'postcss-loader',
                     options: {
-                        plugins: [
-                            require('autoprefixer')()
-                        ]
+                        postcssOptions: {
+                            plugins: [
+                                require('autoprefixer')()
+                            ]
+                        }
                     }
-                }, {
+                },
+                {
                     loader: 'sass-loader',
                     options: {
-                        includePaths: [
-                            path.resolve('node_modules'),
-                            path.resolve('node_modules/flag-icon-css/sass')
-                        ]
+                        sassOptions: {
+                            includePaths: [
+                                path.resolve('node_modules'),
+                                path.resolve('node_modules/flag-icon-css/sass')
+                            ]
+                        }
                     }
                 }]
-            })
         }]
     },
     plugins: [
-        new ExtractTextPlugin({ filename: '[name].css' })
-    ]
+        new MiniCssExtractPlugin({
+            filename: '[name]/css/[name].css',
+            chunkFilename: '[name]/css/[id].css'
+        })
+    ],
+    optimization: {
+        minimizer: [
+            new MiniCssExtractPlugin()
+        ],
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
 }];

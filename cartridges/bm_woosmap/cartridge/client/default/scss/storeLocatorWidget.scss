@@ -8,7 +8,7 @@
     --woosmap-green: #1ee5de;
 }
 
-#bm_content_column {
+#bm-content-column {
     padding: 0;
 }
 
@@ -83,8 +83,8 @@
                 color: var(--woosmap-gray);
             }
 
-            input[type=text],
-            input[type=number],
+            input[type="text"],
+            input[type="number"],
             select,
             textarea {
                 width: 100%;
@@ -116,7 +116,7 @@
             }
         }
 
-        input[type=submit] {
+        input[type="submit"] {
             background-color: var(--woosmap-primary-color);
             color: white;
             padding: 0.75em 1.25em;
@@ -126,7 +126,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        input[type="submit"]:hover {
             background-color: var(--woosmap-primary-color);
         }
     }
