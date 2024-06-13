@@ -19,6 +19,7 @@ function replacer(key, value) {
 
 /**
  * Pretty Print JSON in all Text Areas which have the className 'json-textarea'.
+ * @param {string} elements - An ugly JSON string.
  */
 
 function prettyPrint(elements) {
