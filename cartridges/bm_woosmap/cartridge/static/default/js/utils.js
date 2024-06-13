@@ -1,9 +1,10 @@
 /**
- * @description This function parses a JSON string and converts any stringified arrays 
- *              back into actual arrays within the resulting object to prevent wrongly 
- *              stringified arrays.
- * @param {string} jsonString - A JSON string that may contain stringified arrays.
- * @returns {Object} - A JavaScript object with all stringified arrays converted to actual arrays.
+ * This function parses a JSON string and converts any stringified arrays 
+ * back into actual arrays within the resulting object to prevent wrongly 
+ * stringified arrays.
+ * @param {string} key - A JSON string that may contain stringified arrays.
+ * @param {any} value - A JavaScript object with all stringified arrays converted to actual arrays.
+ * @returns {any} 
  */
 function replacer(key, value) {
     if (typeof value === 'string' && /^\[.*\]$/.test(value)) {
@@ -17,7 +18,7 @@ function replacer(key, value) {
 }
 
 /**
- * @description Pretty Print JSON in all Text Areas which have the className 'json-textarea'
+ * Pretty Print JSON in all Text Areas which have the className 'json-textarea'.
  */
 
 function prettyPrint(elements) {
