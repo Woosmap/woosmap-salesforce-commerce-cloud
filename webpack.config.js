@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('sgmf-scripts').webpack;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 var jsFiles = require('sgmf-scripts').createJsPath();
 var scssFiles = require('sgmf-scripts').createScssPath();
 
@@ -56,8 +57,7 @@ module.exports = [{
     name: 'scss',
     entry: scssFiles,
     output: {
-        path: path.resolve(`./cartridges/${cartridgeName}/cartridge/static`),
-        filename: '[name].css'
+        path: path.resolve(`./cartridges/${cartridgeName}/cartridge/static`)
     },
     module: {
         rules: [{
@@ -95,16 +95,13 @@ module.exports = [{
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name]/css/[name].css',
-            chunkFilename: '[name]/css/[id].css'
+            filename: '[name].css'
         })
     ],
     optimization: {
         minimizer: [
-            new MiniCssExtractPlugin()
+            new CssMinimizerPlugin()
         ],
-        splitChunks: {
-            chunks: 'all'
-        }
+        minimize: true
     }
 }];
