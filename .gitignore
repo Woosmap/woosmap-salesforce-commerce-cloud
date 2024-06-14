@@ -11,3 +11,4 @@ dw.json
 .idea/
 .vscode/
 bin/*
+.DS_Store
