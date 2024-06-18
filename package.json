@@ -1,6 +1,6 @@
 {
   "name": "int_woosmap",
-  "version": "22.1.0",
+  "version": "24.1.0",
   "description": "Woosmap SFRA Link Cartridge",
   "scripts": {
     "test": "sgmf-scripts --test test/unit/**/*.js",
