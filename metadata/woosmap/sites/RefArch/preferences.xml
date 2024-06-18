@@ -2,23 +2,40 @@
 <preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
     <custom-preferences>
         <all-instances>
-            <preference preference-id="storeLocatorWidgetConf">{
-  "woosmapview": {
-    "fitBounds": true
-  },
-  "theme": {
-    "primaryColor": "#000"
-  },
-  "maps": {
-    "provider": "woosmap"
-  },
-  "datasource": {
-    "maxResponses": 10,
-    "maxDistance": 100000,
-    "useDistanceMatrix": false,
-    "routeProvider": "woosmap"
+            <preference preference-id="storeLocatorWidgetConf">
+  {
+    "woosmapview": {
+        "fitBounds": true
+    },
+    "theme": {
+        "primaryColor": "#000"
+    },
+    "maps": {
+        "autocompleteStores": {
+            "maxStores": 3
+        },
+        "localities": {
+            "types": [
+                "locality",
+                "postal_code",
+                "metro_station",
+                "train_station",
+                "shopping"
+            ],
+            "componentRestrictions": {
+                "country": "fr"
+            }
+        },
+        "provider": "woosmap"
+    },
+    "datasource": {
+        "maxResponses": 10,
+        "maxDistance": 100000,
+        "useDistanceMatrix": false,
+        "routeProvider": "woosmap"
+    }
   }
-}</preference>
+</preference>
             <preference preference-id="mobileBreakPoint">900</preference>
         </all-instances>
         <development/>
